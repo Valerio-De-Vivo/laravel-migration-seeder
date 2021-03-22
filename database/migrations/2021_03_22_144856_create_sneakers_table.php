@@ -15,6 +15,10 @@ class CreateSneakersTable extends Migration
     {
         Schema::create('sneakers', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('collection');
+            $table->date('release');
+            $table->float('prezzo' , 6,2);
             $table->timestamps();
         });
     }
